@@ -152,19 +152,16 @@ class TestPetShop(unittest.TestCase):
 
     # --- OPTIONAL ---
 
-    @unittest.skip("delete this line to run the test")
     def test_customer_can_afford_pet__sufficient_funds(self):
         customer = self.customers[0]
         can_buy_pet = customer_can_afford_pet(customer, self.new_pet)
         self.assertEqual(True, can_buy_pet)
 
-    @unittest.skip("delete this line to run the test")
     def test_customer_can_afford_pet__insufficient_funds(self):
         customer = self.customers[1]
         can_buy_pet = customer_can_afford_pet(customer, self.new_pet)
         self.assertEqual(False, can_buy_pet)
 
-    @unittest.skip("delete this line to run the test")
     def test_customer_can_afford_pet__exact_funds(self):
         customer = self.customers[2]
         can_buy_pet = customer_can_afford_pet(customer, self.new_pet)
@@ -173,7 +170,6 @@ class TestPetShop(unittest.TestCase):
     # These are 'integration' tests so we want multiple asserts.
     # If one fails the entire test should fail
     #
-    @unittest.skip("delete this line to run the test")
     def test_sell_pet_to_customer__pet_found(self):
         customer = self.customers[0]
         pet = find_pet_by_name(self.cc_pet_shop,"Arthur")
@@ -185,7 +181,6 @@ class TestPetShop(unittest.TestCase):
         self.assertEqual(100, get_customer_cash(customer))
         self.assertEqual(1900, get_total_cash(self.cc_pet_shop))
 
-    @unittest.skip("delete this line to run the test")
     def test_sell_pet_to_customer__pet_not_found(self):
         customer = self.customers[0]
         pet = find_pet_by_name(self.cc_pet_shop,"Dave")
@@ -197,7 +192,6 @@ class TestPetShop(unittest.TestCase):
         self.assertEqual(1000, get_customer_cash(customer))
         self.assertEqual(1000, get_total_cash(self.cc_pet_shop))
 
-    @unittest.skip("delete this line to run the test")
     def test_sell_pet_to_customer__insufficient_funds(self):
         customer = self.customers[1]
         pet = find_pet_by_name(self.cc_pet_shop,"Arthur")
